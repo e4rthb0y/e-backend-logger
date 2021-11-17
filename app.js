@@ -1,3 +1,8 @@
+require('dotenv').config();
+
+// Conect to DB and create model schemas
+require('./models/schema')();
+
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
