@@ -13,4 +13,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', require('./routes/main.routes'));
 
-module.exports = app;
+const port = process.env.PORT;
+
+app.listen(port, () => {
+  console.log(`Server listening on port: ${port}`);
+});
